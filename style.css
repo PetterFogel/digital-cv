@@ -1,0 +1,213 @@
+/* Global classes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.sub-title {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    font-size: 1.2rem;
+    color: #fff;
+    padding: 0.7rem 1.5rem;
+    text-decoration: none;
+    border: 2px solid #fff;
+    display: inline-block;
+    transition: all 0.4s ease;
+}
+
+.btn:hover {
+    background: #fff;
+    color: #222;
+}
+
+.light-btn {
+    color: #222;
+    border: 2px solid #222;
+}
+
+.dark-btn {
+    background: #222;
+    color: #fff;
+    border: 2px solid #222;
+}
+
+.dark-btn:hover {
+    border: 2px solid #222;
+}
+
+.light-btn:hover {
+    background: #222;
+    color: #fff;
+}
+
+.center {
+    text-align: center;
+    padding: 5% 10%;
+}
+
+/* === Header ===*/
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8vh;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0rem 2rem;
+}
+
+.logo {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    list-style: none;
+}
+
+.nav-links a {
+
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    background: #fff;
+    color: #222;
+}
+
+.burger-menu {
+    display: none;
+}
+
+.burger-menu > div {
+    background: #fff;
+    width: 1.5rem;
+    height: 0.2rem;
+    margin: 0.2rem;
+}
+
+header {
+    background: url("img/hero-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 95vh;
+    width: 100%;
+}
+
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    width: 100%;
+}
+
+.header-content h1 {
+    font-size: 5rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+/* === Main === */
+/* About section */
+.about-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about-info {
+    text-align: start;
+    display: flex;
+    justify-self: center;
+    flex-direction: column;
+    max-width: 35rem;
+}
+
+.profile-image {
+    display: flex;
+    justify-self: center;
+}
+
+.pic {
+    height: 25rem;
+    width: 25rem;
+    background: #222;
+    border-radius: 50%;
+}
+
+/* Work section */
+.work-content {
+    background: #f1f1f1;
+}
+
+.work-social {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;    
+    margin-top: 2rem;
+}
+
+.work-social i {
+    font-size: 15rem;
+    color: #222;
+    margin-bottom: 1rem;
+}
+
+.work-social a {
+    text-decoration: none;
+    color: #222;
+}
+
+/* Skills section */
+.skills-icons {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.skills-content i {
+    color: #222;
+    font-size: 15rem;
+}
+
+/* Contact Section */
+.contact-content {
+    background: #f1f1f1;
+}
+
+/* === Footer === */
+.footer-content {
+    color: #fff;
+    background: #222;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

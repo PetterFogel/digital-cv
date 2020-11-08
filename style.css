@@ -64,16 +64,15 @@ body {
 /* === Header ===*/
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     height: 8vh;
-    max-width: 80rem;
-    margin: 0 auto;
-    padding: 0rem 2rem;
+    background: transparent;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
+    transition: all 0.5s;
 }
 
 .logo a {
@@ -104,13 +103,15 @@ nav {
 
 .burger-menu {
     display: none;
+    cursor: pointer;
 }
 
 .burger-menu > div {
     background: #fff;
     width: 1.5rem;
-    height: 0.2rem;
-    margin: 0.2rem;
+    height: 3px;
+    margin: 0.3rem;
+    transition: all 0.3s ease;
 }
 
 header {
@@ -121,7 +122,6 @@ header {
     height: 95vh;
     width: 100%;
 }
-
 
 .header-content {
     display: flex;
@@ -154,6 +154,12 @@ header {
     justify-self: center;
     flex-direction: column;
     max-width: 35rem;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
 }
 
 .profile-image {
@@ -223,4 +229,151 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* Media Queries */
+@media (max-width: 62rem) {
+    header {
+        height: 90vh;
+    }
+
+    .nav-links {
+        width: 50%;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .about-info {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+    .work-social i {
+        font-size: 12rem;
+    }
+
+    .skills-content i {
+        font-size: 12rem;
+    }
+}
+
+@media (max-width: 48rem) {
+    .logo a {
+        font-size: 1.5rem;
+    }
+
+    nav {
+        background: #222;
+        justify-content: space-between;
+        padding: 0rem 2rem;
+    }
+
+    .nav-links {
+        position: fixed;
+        right: 0;
+        top: 8vh;
+        height: 92vh;
+        background: #222;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    .header-content h1 {
+        font-size: 4rem;
+    }
+
+    .header-content a {
+        display: none;
+    }
+
+    .buttons {
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .pic {
+        height: 20rem;
+        width: 20rem;
+    }
+
+    .work-social {
+        flex-direction: column;
+    }
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+.header-active {
+    background: #222;
+    transition: all 0.5s;
+    color: #f1f1f1;
+}
+
+.rotate .bar1 {
+    transform:  rotate(-45deg) translate(-0.3rem, 0.4rem);
+}
+
+.rotate .bar2 {
+    opacity: 0;
+}
+
+.rotate .bar3 {
+    transform:  rotate(45deg) translate(-0.3rem, -0.4rem);
+}
+
+@media (max-width: 20rem) {
+    .title {
+        font-size: 2rem;
+    }
+
+    .sub-title {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        padding: 0.5rem 1.2rem;
+    }
+
+    .logo a {
+        font-size: 1.2rem;
+    }
+
+    .header-content h1 {
+        font-size: 3rem;
+    }
+
+    .pic {
+        height: 13rem;
+        width: 13rem;
+    }
+
+    .work-social i {
+        font-size: 8rem;
+    }
+
+    .skills-icons {
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+
+    .skills-content i {
+        font-size: 8rem;
+    }
 }

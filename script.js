@@ -1,28 +1,34 @@
+/** Will start functions when browser refresh. */
 window.addEventListener("load", main);
+/** Will start functions when scrolling. */
 window.addEventListener("scroll", scrollFunctions);
 
 function main()  {
     burgerIconNav();
 }
 
+/** Will start functions within. */
 function scrollFunctions() {
     infoScrollAppear();
+    navTransparentToColor();
 }
 
+/** Will make navigation links slide in into browser. */
 function burgerIconNav() {
-    // Fetch classes from HTML.
+    /** @type {HTMLDivElement} Contains 3 divs with layout of burger menu. */
     const burgerIcon = document.querySelector(".burger-menu");
-    const navBar = document.querySelector(".nav-links");
-    // Click burger-icon to start function.
+    /** @type {HTMLUListElement} */
+    const navLinks = document.querySelector(".nav-links");
+    /** Click burger-icon to start function. */ 
     burgerIcon.addEventListener("click", function() {
-        // Nav links shows.
-        navBar.classList.toggle("nav-active");
-        // Burger bars rotate.
+        navLinks.classList.toggle("links-active");
         burgerIcon.classList.toggle("rotate");
     });
 }
 
+/** Will make a div, that contains text and buttons appear when scroll. */
 function infoScrollAppear() {
+    /** @type {HTMLDivElement} Div that contains paragraphs and buttons. */
     const aboutText = document.querySelector(".about-info");
     const introPosition = aboutText.getBoundingClientRect().top;
     const screenPosition = window.innerHeight / 1.8;
@@ -32,37 +38,16 @@ function infoScrollAppear() {
     }
 }
 
-// Navigation bar gets color when scroll-effect.
-window.onscroll = function() {
-// Fetch classes from HTML.
-const nav = document.querySelector("nav");
-const logo = document.querySelector(".logo");
-const allNavLinks = document.querySelectorAll(".nav-links li a");
+
+/** Navigation bar will get color when scroll. */
+function navTransparentToColor() {
+    /** @type {HTMLDivElement} Navigation bar. */
+    const navBar = document.querySelector("nav");
     var top = window.scrollY;
+
     if (top >= 50) {
-        nav.classList.add("header-active");
-        logo.classList.add("color-active");
-        // Loops through all links.
-        for (const link of allNavLinks) {
-            link.classList.add("color-active");
-        }
+        navBar.classList.add("nav-active");
     } else {
-        nav.classList.remove("header-active");
-        logo.classList.remove("color-active");
-        // Loops through all links.
-        for (const link of allNavLinks) {
-            link.classList.remove("color-active");
-        }
+        navBar.classList.remove("nav-active");
     }
 }
-
-// // SMOOTH SCROLL FUNCTIONALITY
-// document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-//     anchor.addEventListener('click', function(e) {
-//       e.preventDefault();
-//       document.querySelector(this.getAttribute('href')).scrollIntoView({
-//         behavior: 'smooth'
-//       });
-//     });
-//   });
-

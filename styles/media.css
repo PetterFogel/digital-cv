@@ -53,7 +53,7 @@
         align-items: center;
         width: 50%;
         transform: translateX(100%);
-        transition: transform 0.5s ease-in;
+        transition: all 500ms ease-in;
     }
 
     .burger-menu {
@@ -88,14 +88,8 @@
 
 }
 
-.nav-active {
+.links-active {
     transform: translateX(0%);
-}
-
-.header-active {
-    background: #222;
-    transition: all 0.5s;
-    color: #f1f1f1;
 }
 
 .rotate .bar1 {

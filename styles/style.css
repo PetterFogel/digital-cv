@@ -119,7 +119,7 @@ nav {
 }
 
 header {
-    background: url("./img/hero-bg.jpg");
+    background: url(".//hero-bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

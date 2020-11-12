@@ -1,46 +1,46 @@
-/** Will start functions when browser refresh. */
+/** Will start the main function when browser refresh. */
 window.addEventListener("load", main);
-/** Will start functions when scrolling. */
+/** Will start the scrollunctions when scrolling in browser. */
 window.addEventListener("scroll", scrollFunctions);
 
+/** Will initiate functions within. */
 function main()  {
-    burgerIconNav();
+    burgerMenuNav();
 }
 
-/** Will start functions within. */
+/** Will initiate  functions within. */
 function scrollFunctions() {
-    infoScrollAppear();
-    navTransparentToColor();
+    onScrollDivAppear();
+    fromTransparentToColor();
 }
 
 /** Will make navigation links slide in into browser. */
-function burgerIconNav() {
-    /** @type {HTMLDivElement} Contains 3 divs with layout of burger menu. */
+function burgerMenuNav() {
+    /** @type {HTMLDivElement} Contains 3 divs with layout of a burger menu. */
     const burgerIcon = document.querySelector(".burger-menu");
     /** @type {HTMLUListElement} */
     const navLinks = document.querySelector(".nav-links");
     /** Click burger-icon to start function. */ 
     burgerIcon.addEventListener("click", function() {
-        navLinks.classList.toggle("links-active");
+        navLinks.classList.toggle("burger-active");
         burgerIcon.classList.toggle("rotate");
     });
 }
 
 /** Will make a div, that contains text and buttons appear when scroll. */
-function infoScrollAppear() {
+function onScrollDivAppear() {
     /** @type {HTMLDivElement} Div that contains paragraphs and buttons. */
-    const aboutText = document.querySelector(".about-info");
-    const introPosition = aboutText.getBoundingClientRect().top;
-    const screenPosition = window.innerHeight / 1.8;
+    const aboutInfoText = document.querySelector(".about-info");
+    const introPosition = aboutInfoText.getBoundingClientRect().top;
+    const screenPosition = window.innerHeight / 2;
 
     if (introPosition < screenPosition) {
-        aboutText.classList.add("info-appear");
+        aboutInfoText.classList.add("info-appear");
     }
 }
 
-
 /** Navigation bar will get color when scroll. */
-function navTransparentToColor() {
+function fromTransparentToColor() {
     /** @type {HTMLDivElement} Navigation bar. */
     const navBar = document.querySelector("nav");
     var top = window.scrollY;

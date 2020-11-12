@@ -8,7 +8,7 @@ function main()  {
     burgerMenuNav();
 }
 
-/** Will initiate  functions within. */
+/** Will initiate functions within. */
 function scrollFunctions() {
     onScrollDivAppear();
     fromTransparentToColor();
@@ -16,7 +16,7 @@ function scrollFunctions() {
 
 /** Will make navigation links slide in into browser. */
 function burgerMenuNav() {
-    /** @type {HTMLDivElement} Contains 3 divs with layout of a burger menu. */
+    /** @type {HTMLDivElement} */
     const burgerIcon = document.querySelector(".burger-menu");
     /** @type {HTMLUListElement} */
     const navLinks = document.querySelector(".nav-links");
@@ -27,9 +27,9 @@ function burgerMenuNav() {
     });
 }
 
-/** Will make a div, that contains text and buttons appear when scroll. */
+/** Will make a div, containing text and buttons appear when scroll. */
 function onScrollDivAppear() {
-    /** @type {HTMLDivElement} Div that contains paragraphs and buttons. */
+    /** @type {HTMLDivElement} */
     const aboutInfoText = document.querySelector(".about-info");
     const introPosition = aboutInfoText.getBoundingClientRect().top;
     const screenPosition = window.innerHeight / 2;
@@ -39,9 +39,9 @@ function onScrollDivAppear() {
     }
 }
 
-/** Navigation bar will get color when scroll. */
+/** Navigation bar will get color when scrolling in browser. */
 function fromTransparentToColor() {
-    /** @type {HTMLDivElement} Navigation bar. */
+    /** @type {HTMLDivElement} */
     const navBar = document.querySelector("nav");
     var top = window.scrollY;
 

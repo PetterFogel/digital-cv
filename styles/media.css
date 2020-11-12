@@ -88,6 +88,10 @@
 
 }
 
+.nav-active {
+    background: #222;
+}
+
 .burger-active {
     transform: translateX(0%);
 }

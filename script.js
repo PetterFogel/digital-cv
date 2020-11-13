@@ -18,7 +18,7 @@ function burgerMenuNav() {
     const burgerIcon = document.querySelector(".burger-menu");
     /** @type {HTMLUListElement} */
     const navLinks = document.querySelector(".nav-links");
-    /** Click burger-icon to start function. */ 
+    
     burgerIcon.addEventListener("click", function() {
         navLinks.classList.toggle("burger-active");
         burgerIcon.classList.toggle("rotate");

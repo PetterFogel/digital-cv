@@ -1,20 +1,18 @@
-/** Will start the main function when browser refresh. */
 window.addEventListener("load", main);
-/** Will start the scrollunctions when scrolling in browser. */
-window.addEventListener("scroll", scrollFunctions);
 
-/** Will initiate functions within. */
+/** Will start program when browser refresh. */
 function main()  {
     burgerMenuNav();
+    window.addEventListener("scroll", scrollFunctions);
 }
 
-/** Will initiate functions within. */
+/** Will start functions with scroll functionality. */
 function scrollFunctions() {
     onScrollDivAppear();
     fromTransparentToColor();
 }
 
-/** Will make navigation links slide in into browser. */
+/** Will toggle slide navigation links in and out from browser. */
 function burgerMenuNav() {
     /** @type {HTMLDivElement} */
     const burgerIcon = document.querySelector(".burger-menu");
@@ -27,7 +25,7 @@ function burgerMenuNav() {
     });
 }
 
-/** Will make a div, containing text and buttons appear when scroll. */
+/** Will make a div, containing text and buttons appear when scrolling. */
 function onScrollDivAppear() {
     /** @type {HTMLDivElement} */
     const aboutInfoText = document.querySelector(".about-info");

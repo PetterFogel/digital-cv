@@ -9,7 +9,7 @@ function main()  {
 /** Will start functions with scroll functionality. */
 function scrollFunctions() {
     onScrollDivAppear();
-    fromTransparentToColor();
+    navTransparentToColor();
 }
 
 /** Will toggle slide navigation links in and out from browser. */
@@ -37,8 +37,8 @@ function onScrollDivAppear() {
     }
 }
 
-/** Navigation bar will get color when scrolling in browser. */
-function fromTransparentToColor() {
+/** The transparent navigation bar will get color when scrolling. */
+function navTransparentToColor() {
     /** @type {HTMLDivElement} */
     const navBar = document.querySelector("nav");
     var top = window.scrollY;

@@ -174,16 +174,21 @@ header {
     gap: 1rem;
 }
 
-.profile-image {
+.profile-image-holder {
+    background: url("../img/profile.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 20rem;
+    width: 20rem;
+    border-radius: 50%;
     display: flex;
     justify-self: center;
 }
 
 .pic {
-    height: 20rem;
-    width: 20rem;
-    background: #222;
-    border-radius: 50%;
+
+
 }
 
 /* Work section */

@@ -90,12 +90,11 @@ nav {
 .nav-links {
     display: flex;
     justify-content: space-between;
-    width: 40%;
+    width: 30%;
     list-style: none;
 }
 
 .nav-links a {
-
     color: #fff;
     text-decoration: none;
     padding: 0.5rem 1rem;
